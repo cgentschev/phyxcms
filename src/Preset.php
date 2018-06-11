@@ -1,6 +1,6 @@
 <?php
 
-namespace Phyxcms\Phyxcms;
+namespace Phyx\Phyxcms;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Arr;
