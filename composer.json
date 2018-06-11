@@ -1,0 +1,27 @@
+{
+    "name": "phyx/phyxcms",
+    "description": "Base Bulma phyXCMS package",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Constantine D. Gentschev",
+            "email": "phyxdesign@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "files": [
+            "app/helpers.php"
+        ],
+        "psr-4": {
+            "Phyxcms\\Phyxcms\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": ["Phyxcms\\Phyxcms\\PhyxcmsServiceProvider"]
+        }
+    }
+}
