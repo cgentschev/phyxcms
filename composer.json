@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "files": [
-            "app/helpers.php"
+            "src/stubs/helpers/helpers.php"
         ],
         "psr-4": {
             "Phyxcms\\Phyxcms\\": "src/"
@@ -21,7 +21,9 @@
     "require": {},
     "extra": {
         "laravel": {
-            "providers": ["Phyxcms\\Phyxcms\\PhyxcmsServiceProvider"]
+            "providers": [
+                "Phyxcms\\PhyxcmsServiceProvider"
+            ]
         }
     }
 }
