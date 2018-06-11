@@ -2,7 +2,7 @@
 
 namespace Phyx\Phyxcms;
 
-use Phyxcms\Preset;
+use Phyx\Phyxcms\Preset;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
 
