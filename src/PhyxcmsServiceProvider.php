@@ -1,6 +1,6 @@
 <?php
 
-namespace Phyxcms\Phyxcms;
+namespace Phyx\Phyxcms;
 
 use Phyxcms\Preset;
 use Illuminate\Support\ServiceProvider;

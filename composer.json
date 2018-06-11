@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Phyxcms\\PhyxcmsServiceProvider"
+                "Phyx\\Phyxcms\\PhyxcmsServiceProvider"
             ]
         }
     }
