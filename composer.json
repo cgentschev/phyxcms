@@ -1,5 +1,6 @@
 {
     "name": "phyx/phyxcms",
+
     "description": "Base Bulma phyXCMS package",
     "license": "MIT",
     "authors": [
