@@ -15,7 +15,7 @@
             "src/stubs/helpers/helpers.php"
         ],
         "psr-4": {
-            "Phyxcms\\Phyxcms\\": "src/"
+            "Phyx\\Phyxcms\\": "src/"
         }
     },
     "require": {},
