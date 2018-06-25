@@ -97,6 +97,8 @@ class Preset extends LaravelPreset {
         copy(__DIR__.'/stubs/views/includes/nav.blade.php', resource_path('/views/themes/default/includes/nav.blade.php'));
         copy(__DIR__.'/stubs/views/includes/footer.blade.php', resource_path('/views/themes/default/includes/footer.blade.php'));
         copy(__DIR__.'/stubs/views/includes/head.blade.php', resource_path('/views/themes/default/includes/head.blade.php'));
+        copy(__DIR__.'/stubs/views/includes/styles.blade.php', resource_path('/views/themes/default/includes/styles.blade.php'));
+        copy(__DIR__.'/stubs/views/includes/scripts.blade.php', resource_path('/views/themes/default/includes/scripts.blade.php'));
 
         copy(__DIR__.'/stubs/views/layouts/front.blade.php', resource_path('/views/themes/default/layouts/front.blade.php'));
         copy(__DIR__.'/stubs/views/layouts/page.blade.php', resource_path('/views/themes/default/layouts/page.blade.php'));

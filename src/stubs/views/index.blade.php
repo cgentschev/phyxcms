@@ -1,3 +1,5 @@
+@extends(phyxcms_front_layout())
+
 @section('meta')
     @component(phyxcms_component('meta'))
         @slot('url')
