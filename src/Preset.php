@@ -90,6 +90,7 @@ class Preset extends LaravelPreset {
         File::makeDirectory(resource_path('views\\themes\\default'), 0775, true);
         File::makeDirectory(resource_path('views\\themes\\default\\includes'), 0775, true);
         File::makeDirectory(resource_path('views\\themes\\default\\layouts'), 0775, true);
+        File::makeDirectory(resource_path('views\\themes\\default\\components'), 0775, true);
 
         copy(__DIR__.'/stubs/views/index.blade.php', resource_path('/views/themes/default/index.blade.php'));
 
@@ -99,6 +100,8 @@ class Preset extends LaravelPreset {
 
         copy(__DIR__.'/stubs/views/layouts/front.blade.php', resource_path('/views/themes/default/layouts/front.blade.php'));
         copy(__DIR__.'/stubs/views/layouts/page.blade.php', resource_path('/views/themes/default/layouts/page.blade.php'));
+
+        copy(__DIR__.'/stubs/views/components/meta.blade.php', resource_path('/views/themes/default/components/meta.blade.php'));
 
 
     }
