@@ -1,6 +1,7 @@
 <?php
 
 
+
 if (! function_exists('servestatic')) {
     /**
      * Generate an asset path for the application.
@@ -38,7 +39,7 @@ if (! function_exists('theme')) {
     function theme($string)
     {
 
-        return env('THEME_PATH') . $string;
+        return config('phyxcms.theme_path') . $string;
 
     }
 }

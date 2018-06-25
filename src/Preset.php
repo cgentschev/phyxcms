@@ -16,14 +16,14 @@ class Preset extends LaravelPreset {
         static::copyBaseStyles();
         static::updatePackages();
         static::copyHelperFunctions();
+        static::generateConsoleCommand();
         static::copyBootstrapJS();
         static::replaceComposerJson();
-
+        static::copyConfigFile();
         static::replaceEnv();
         static::addStaticController();
         static::generateTheme();
         static::addRoutes();
-        static::generateKey();
 
     }
 
@@ -47,6 +47,14 @@ class Preset extends LaravelPreset {
             'bootstrap'
 
         ]));
+
+    }
+
+    public static function copyConfigFile()
+
+    {
+
+        copy(__DIR__.'/stubs/phyxcms.php', base_path('config/phyxcms.php'));
 
     }
 
@@ -74,7 +82,6 @@ class Preset extends LaravelPreset {
     public static function replaceEnv()
     {
 
-        copy(__DIR__.'/stubs/helpers/.env', base_path('.env'));
         copy(__DIR__.'/stubs/helpers/.env.example', base_path('.env.example'));
 
     }
@@ -113,9 +120,10 @@ class Preset extends LaravelPreset {
         copy(__DIR__.'/stubs/routes/web.php', base_path('routes/web.php'));
     }
 
-    public static function generateKey()
+    public static function generateConsoleCommand()
     {
-        Artisan::call('key:generate');
+        File::makeDirectory(base_path('app\\Console\\Commands\\'), 0775, true);
+        copy(__DIR__.'/Console/Commands/InstallCommand.php.php', base_path('app/Console/Commands/InstallCommand.php'));
     }
 
 }
