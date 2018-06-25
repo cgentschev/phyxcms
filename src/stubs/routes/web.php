@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/', 'StaticController@index');
+Route::get('/', 'StaticController@index')->name('home');

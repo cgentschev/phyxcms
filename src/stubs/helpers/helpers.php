@@ -115,6 +115,42 @@ if (! function_exists('phyxcms_footer')) {
 
 }
 
+if (! function_exists('phyxcms_scripts')) {
+    /**
+     * Generate an asset path for the application.
+     *
+     * Serve static content from a different domain,
+     * provided in the env file
+     *
+     * @return string
+     */
+    function phyxcms_scripts()
+    {
+
+        return env('THEME_PATH') . 'includes.scripts';
+
+    }
+
+}
+
+if (! function_exists('phyxcms_styles')) {
+    /**
+     * Generate an asset path for the application.
+     *
+     * Serve static content from a different domain,
+     * provided in the env file
+     *
+     * @return string
+     */
+    function phyxcms_styles()
+    {
+
+        return env('THEME_PATH') . 'includes.styles';
+
+    }
+
+}
+
 if (! function_exists('phyxcms_head')) {
     /**
      * Generate an asset path for the application.
@@ -127,7 +163,26 @@ if (! function_exists('phyxcms_head')) {
     function phyxcms_head()
     {
 
-        return env('THEME_PATH') . 'includes.footer';
+        return env('THEME_PATH') . 'includes.head';
+
+    }
+
+}
+
+
+if (! function_exists('phyxcms_component')) {
+    /**
+     * Generate an asset path for the application.
+     *
+     * Serve static content from a different domain,
+     * provided in the env file
+     *
+     * @return string
+     */
+    function phyxcms_component($component)
+    {
+
+        return env('THEME_PATH') . 'components.' . $component;
 
     }
 
