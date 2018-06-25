@@ -16,6 +16,9 @@ class Preset extends LaravelPreset {
         static::copyBaseStyles();
         static::updatePackages();
         static::copyHelperFunctions();
+        static::copyBootstrapJS();
+        static::replaceComposerJson();
+
         static::replaceEnv();
         static::addStaticController();
         static::generateTheme();
@@ -47,6 +50,20 @@ class Preset extends LaravelPreset {
 
     }
 
+    public static function copyBootstrapJS()
+    {
+
+        copy(__DIR__.'/stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
+
+    }
+
+    public static function replaceComposerJson()
+    {
+
+        copy(__DIR__.'/stubs/composer.json', base_path('composer.json'));
+
+    }
+
     public static function copyHelperFunctions()
     {
 
@@ -69,8 +86,21 @@ class Preset extends LaravelPreset {
 
     public static function generateTheme()
     {
+
         File::makeDirectory(resource_path('views\\themes\\default'), 0775, true);
+        File::makeDirectory(resource_path('views\\themes\\default\\includes'), 0775, true);
+        File::makeDirectory(resource_path('views\\themes\\default\\layouts'), 0775, true);
+
         copy(__DIR__.'/stubs/views/index.blade.php', resource_path('/views/themes/default/index.blade.php'));
+
+        copy(__DIR__.'/stubs/views/includes/nav.blade.php', resource_path('/views/themes/default/includes/nav.blade.php'));
+        copy(__DIR__.'/stubs/views/includes/footer.blade.php', resource_path('/views/themes/default/includes/footer.blade.php'));
+        copy(__DIR__.'/stubs/views/includes/head.blade.php', resource_path('/views/themes/default/includes/head.blade.php'));
+
+        copy(__DIR__.'/stubs/views/layouts/front.blade.php', resource_path('/views/themes/default/layouts/front.blade.php'));
+        copy(__DIR__.'/stubs/views/layouts/page.blade.php', resource_path('/views/themes/default/layouts/page.blade.php'));
+
+
     }
 
     public static function addRoutes()
