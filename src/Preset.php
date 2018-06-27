@@ -82,7 +82,7 @@ class Preset extends LaravelPreset {
     public static function replaceEnv()
     {
 
-        copy(__DIR__.'/stubs/helpers/.env.example', base_path('.env.example'));
+        copy(__DIR__.'/stubs/helpers/.env', base_path('.env'));
 
     }
 
@@ -123,7 +123,7 @@ class Preset extends LaravelPreset {
     public static function generateConsoleCommand()
     {
         File::makeDirectory(base_path('app\\Console\\Commands\\'), 0775, true);
-        copy(__DIR__.'/Console/Commands/InstallCommand.php.php', base_path('app/Console/Commands/InstallCommand.php'));
+        copy(__DIR__.'/Console/Commands/InstallCommand.php', base_path('app/Console/Commands/InstallCommand.php'));
     }
 
 }
