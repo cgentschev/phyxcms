@@ -120,7 +120,7 @@ class InstallCommand extends Command
 
     protected function renameThemeDirectory()
     {
-        rename(resource_path('views/themes/default'), resource_path('views/themes/' . config('phyxcms.theme_path')));
+        rename(resource_path('views\\themes\\default'), resource_path('views\\themes\\' . config('phyxcms.theme_name')));
     }
 
     /**
