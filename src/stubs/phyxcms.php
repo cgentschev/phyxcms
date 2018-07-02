@@ -15,6 +15,6 @@ return [
 
     'theme_name' => env('THEME_NAME', 'default'),
 
-    'theme_path' => 'themes.' . config('phyxcms.theme_name')
+    'theme_path' => 'themes.' . env('THEME_NAME', 'default') . '.'
 
     ];
