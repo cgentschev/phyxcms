@@ -12,7 +12,8 @@
     "minimum-stability": "stable",
     "autoload": {
         "files": [
-            "src/stubs/helpers/helpers.php"
+            "src/stubs/helpers/helpers.php",
+            "src/Console/Commands/InstallCommand.php"
         ],
         "psr-4": {
             "Phyx\\Phyxcms\\": "src/"
