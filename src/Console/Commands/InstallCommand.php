@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Question\Question;
 
 class InstallCommand extends Command
@@ -48,7 +49,9 @@ class InstallCommand extends Command
 //            $this->line('~ Database successfully migrated.');
 //        }
 
-        $this->renameThemeDirectory();
+        $this->sleep(3);
+
+        $this->generateThemeDirectory();
 
         $this->call('cache:clear');
 
@@ -118,9 +121,13 @@ class InstallCommand extends Command
         }
     }
 
-    protected function renameThemeDirectory()
+    protected function generateThemeDirectory()
     {
-        rename(resource_path('views\\themes\\default'), resource_path('views\\themes\\' . env('THEME_NAME')));
+        $templateDirectory = resource_path('views\\themes\\default');
+        $newDirectory = resource_path('views\\themes\\' . env('THEME_NAME'));
+
+        Storage::move($templateDirectory, $newDirectory);
+
     }
 
     /**
