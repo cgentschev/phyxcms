@@ -49,8 +49,6 @@ class InstallCommand extends Command
 //            $this->line('~ Database successfully migrated.');
 //        }
 
-        $this->sleep(3);
-
         $this->generateThemeDirectory();
 
         $this->call('cache:clear');
