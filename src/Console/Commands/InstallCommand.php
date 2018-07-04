@@ -102,7 +102,7 @@ class InstallCommand extends Command
             'DB_PORT' => $this->ask('Database port', 3306),
             'DB_USERNAME' => $this->ask('Database user'),
             'DB_PASSWORD' => $this->askHiddenWithDefault('Database password (leave blank for no password)', 'secret'),
-            'THEME_PATH'  => $this->ask('What is the name of your theme?')
+            'THEME_NAME'  => $this->ask('What is the name of your theme?')
         ];
     }
 
